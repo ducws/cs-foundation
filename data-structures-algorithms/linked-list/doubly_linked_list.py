@@ -60,14 +60,16 @@ class DoublyLinkedList:
         if not self.head:
             return
         if self.head.value == value:
-            # The old head will be automatically set to None by Python's garbage collector
+            # The old head will be automatically set to None by Python's garbage collector.
             self.head = self.head.next
             if self.head:
-                # Set the previous link of the new head to None. Without this line, the new head previous link still point to the old node which has been deleted.
+                '''Set the previous link of the new head to None. 
+                Without this line, the new head previous link still
+                points to the old node which has been deleted.'''
                 self.head.previous = None
         else:
             current_node = self.head
-            # Loop until the value of the node equals to the value we want to delete
+            # Loop until the value of the node equals to the value we want to delete.
             while current_node.next:
                 if current_node.value == value:
                     current_node.previous.next = current_node.next
@@ -105,7 +107,7 @@ class DoublyLinkedList:
             current_node.previous = current_node.next
             '''We move to the next node in the list by assigning 
             'current_node' to its new 'previous' node (which was 
-            its original 'next' node)'''
+            its original 'next' node).'''
             current_node.next = previous_node
             current_node = current_node.previous
         self.head = previous_node.previous
@@ -132,7 +134,7 @@ class DoublyLinkedList:
         point to the first node of the list even though all nodes 
         have been deleted. Therefore, any subsequent operations on the linked list
         will still reference to the first node, which is no longer part of the list,
-        leads to unexpected behavior'''
+        leads to unexpected behavior.'''
         self.head = None
 
     # Print all nodes of a linked list
