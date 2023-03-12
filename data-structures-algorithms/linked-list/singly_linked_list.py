@@ -8,7 +8,7 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    # Counting the number of nodes in a linked list
+    # Count the number of nodes in a linked list
     def size(self):
         count = 0
         current_node = self.head
@@ -17,7 +17,7 @@ class SinglyLinkedList:
             current_node = current_node.next
         return count
 
-    # Adding a new node to the end of a linked list 
+    # Add a new node to the end of a linked list 
     def append(self, value):
         new_node = Node(value)
         # Just another way of writing: if self.head is None
@@ -30,7 +30,7 @@ class SinglyLinkedList:
                 current_node = current_node.next
             current_node.next = new_node
 
-    # Adding a new node to the beginning of a linked list
+    # Add a new node to the beginning of a linked list
     def prepend(self, value):
         new_node = Node(value)
         new_node.next = self.head
