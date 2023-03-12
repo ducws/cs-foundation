@@ -74,11 +74,9 @@ class SinglyLinkedList:
         else:
             current_node = self.head
             for i in range(position - 1):
+                current_node = current_node.next
                 if not current_node.next:
                     return
-                current_node = current_node.next
-            if not current_node.next:
-                return
             current_node.next = current_node.next.next
 
     # Delete all nodes in a linked list 
