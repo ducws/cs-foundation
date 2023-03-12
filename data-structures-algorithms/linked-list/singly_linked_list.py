@@ -17,7 +17,7 @@ class SinglyLinkedList:
             current_node = current_node.next
         return count
 
-    # Adding a new node at the end of a linked list 
+    # Adding a new node to the end of a linked list 
     def append(self, value):
         new_node = Node(value)
         # Just another way of writing: if self.head is None
@@ -30,7 +30,7 @@ class SinglyLinkedList:
                 current_node = current_node.next
             current_node.next = new_node
 
-    # Adding a new node at the beginning of a linked list
+    # Adding a new node to the beginning of a linked list
     def prepend(self, value):
         new_node = Node(value)
         new_node.next = self.head
