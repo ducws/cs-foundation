@@ -115,5 +115,3 @@ class SinglyLinkedList:
             values.append(current_node.value)
             current_node = current_node.next 
         print(values)
-
-        
