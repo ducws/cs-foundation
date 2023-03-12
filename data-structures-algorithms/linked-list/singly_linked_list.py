@@ -48,7 +48,7 @@ class SinglyLinkedList:
             new_node.next = current_node.next
             current_node.next = new_node
 
-    # Remove a node by value from a linked list
+    # Remove a node from a linked list by a value
     def remove(self, value):
         if not self.head:
             return
@@ -65,7 +65,7 @@ class SinglyLinkedList:
                     break
                 current_node = current_node.next
 
-    # Remove a node by a selected position from a linked list
+    # Remove a node from a linked list by a selected position
     def remove_at(self, position):
         if not self.head:
             return
