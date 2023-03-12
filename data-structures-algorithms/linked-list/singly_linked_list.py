@@ -57,7 +57,7 @@ class SinglyLinkedList:
             self.head = self.head.next
         else:
             current_node = self.head
-            # Loop until the value of the next node equals to the value wanted to delete
+            # Loop until the value of the next node equals to the value we want to delete
             while current_node.next:
                 if current_node.next.value == value:
                     # Python's garbage collector will automatically free the memory of the current_node.next so that we don't have to do it manually
