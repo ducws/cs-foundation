@@ -36,7 +36,7 @@ class SinglyLinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    # Adding a new node to a selected position to a the linked list
+    # Adding a new node to a selected position in a the linked list
     def insert(self, value, position):
         if position == 0:
             self.prepend(value)
