@@ -79,7 +79,7 @@ class SinglyLinkedList:
                     return
             current_node.next = current_node.next.next
 
-    # Delete all nodes in a linked list 
+    # Delete all nodes of a linked list 
     def delete_recursive(self, node):
         if node:
             self.delete_recursive(node.next)
@@ -105,7 +105,7 @@ class SinglyLinkedList:
             current_node = next_node
         self.head = previous_node
 
-    # Find the position of a value in a linked list 
+    # Find the position of a node if its value in the linked list 
     def get_position(self, value):
         position = 0
         current_node = self.head
