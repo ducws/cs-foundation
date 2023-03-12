@@ -8,7 +8,7 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
-    # Counting the number of elements in a linked list
+    # Counting the number of nodes in a linked list
     def size(self):
         count = 0
         current_node = self.head
@@ -17,7 +17,7 @@ class SinglyLinkedList:
             current_node = current_node.next
         return count
 
-    # Adding a new element to the last of the linked list
+    # Adding a new node to the last of the linked list
     def append(self, value):
         new_node = Node(value)
         # Just another way of writing: if self.head is None
@@ -30,13 +30,13 @@ class SinglyLinkedList:
                 current_node = current_node.next
             current_node.next = new_node
 
-    # Adding a new element to the front of the linked list; at the same time, the new node also becomes the new head of the linked list
+    # Adding a new node to the front of the linked list; at the same time, the new node also becomes the new head of the linked list
     def prepend(self, value):
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
 
-    # Adding a new element to a selected position in the linked list
+    # Adding a new node to a selected position in the linked list
     def insert(self, value, position):
         if position == 0:
             self.prepend(value)
@@ -48,7 +48,7 @@ class SinglyLinkedList:
             new_node.next = current_node.next
             current_node.next = new_node
 
-    # Remove an element by value if it is in the linked list
+    # Remove an node by value if it is in the linked list
     def remove(self, value):
         if not self.head:
             return
@@ -64,7 +64,7 @@ class SinglyLinkedList:
                     break
                 current_node = current_node.next
 
-    # Remove an element by a selected position in the linked list
+    # Remove an node by a selected position in the linked list
     def remove_at(self, position):
         if not self.head:
             return
@@ -117,7 +117,7 @@ class SinglyLinkedList:
             current_node = current_node.next
         return -1
 
-    # Print all elements of a linked list
+    # Print all nodes of a linked list
     def display(self):
         values = []
         current_node = self.head
