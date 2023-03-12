@@ -17,8 +17,7 @@ class SinglyLinkedList:
             current_node = current_node.next
         return count
 
-        # Adding a new element to the last of the linked list
-
+    # Adding a new element to the last of the linked list
     def append(self, value):
         new_node = Node(value)
         # Just another way of writing: if self.head is None
