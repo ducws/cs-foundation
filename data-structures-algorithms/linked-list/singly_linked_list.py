@@ -17,7 +17,7 @@ class SinglyLinkedList:
             current_node = current_node.next
         return count
 
-    # Adding a new node to the last of the linked list
+    # Adding a new node at the end of a linked list 
     def append(self, value):
         new_node = Node(value)
         # Just another way of writing: if self.head is None
@@ -30,13 +30,13 @@ class SinglyLinkedList:
                 current_node = current_node.next
             current_node.next = new_node
 
-    # Adding a new node to the front of the linked list; at the same time, the new node also becomes the new head of the linked list
+    # Adding a new node at the beginning of a linked list
     def prepend(self, value):
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
 
-    # Adding a new node to a selected position in the linked list
+    # Adding a new node to a selected position to a the linked list
     def insert(self, value, position):
         if position == 0:
             self.prepend(value)
@@ -48,7 +48,7 @@ class SinglyLinkedList:
             new_node.next = current_node.next
             current_node.next = new_node
 
-    # Remove a node by value if it is in the linked list
+    # Remove a node by value from a linked list
     def remove(self, value):
         if not self.head:
             return
@@ -64,7 +64,7 @@ class SinglyLinkedList:
                     break
                 current_node = current_node.next
 
-    # Remove a node by a selected position in the linked list
+    # Remove a node by a selected position from a linked list
     def remove_at(self, position):
         if not self.head:
             return
@@ -80,7 +80,7 @@ class SinglyLinkedList:
                 return
             current_node.next = current_node.next.next
 
-    # Delete each node before the head recursively
+    # Delete all nodes in a linked list 
     def delete_recursive(self, node):
         if node:
             self.delete_recursive(node.next)
@@ -95,7 +95,7 @@ class SinglyLinkedList:
         leads to unexpected behavior'''
         self.head = None
 
-    # Reverse the order of the linked list
+    # Reverse the order of a linked list
     def reverse(self):
         previous_node = None
         current_node = self.head
@@ -106,7 +106,7 @@ class SinglyLinkedList:
             current_node = next_node
         self.head = previous_node
 
-    # Find the position of a value if it is in the linked list
+    # Find the position of a value in a linked list 
     def get_position(self, value):
         position = 0
         current_node = self.head
