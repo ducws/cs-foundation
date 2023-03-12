@@ -53,13 +53,14 @@ class SinglyLinkedList:
         if not self.head:
             return
         if self.head.value == value:
+            # The old head will be set to None automatically by Python's garbage collector 
             self.head = self.head.next
         else:
             current_node = self.head
             # Loop until the value of the next node equals to the value wanted to delete
             while current_node.next:
                 if current_node.next.value == value:
-                    # Python will automatically clear the memory of the current_node.next so that we don't have to do it manually
+                    # Python's garbage collector will automatically free the memory of the current_node.next so that we don't have to do it manually
                     current_node.next = current_node.next.next
                     break
                 current_node = current_node.next
