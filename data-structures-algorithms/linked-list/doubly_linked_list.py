@@ -147,7 +147,7 @@ class DoublyLinkedList:
         print(values)
 
 
-sll = DoublyLinkedList()
+dll = DoublyLinkedList()
 day = 13
 month = 3
 year = 2023
@@ -156,39 +156,39 @@ minute = 19
 second = 20
 
 # Test "prepend" operation
-sll.prepend(day)
+dll.prepend(day)
 
 # Test "append" operation
-sll.append(month)
+dll.append(month)
 
 # Test "insert" operation
-sll.insert(year, 2)
+dll.insert(year, 2)
 
 # Check three adding operations
-sll.display()
+dll.display()
 
 # Test "getting position" operation
-print(sll.get_position(2023))
+print(dll.get_position(2023))
 
 # Test "reverse" operation
-sll.reverse()
-sll.display()
+dll.reverse()
+dll.display()
 
 # Test "size" operation
-print(sll.size())
+print(dll.size())
 
 # Test "remove by value" operation
-sll.remove(2023)
+dll.remove(2023)
 
 # Test "remove by position" operation
-sll.remove_at(1)
+dll.remove_at(1)
 
 # Check two removing operations
-sll.display()
+dll.display()
 
 for element in [hour, minute, second]:
-    sll.append(element)
+    dll.append(element)
 
 # Check "delete all nodes" operation
-sll.delete_all()
-sll.display()
+dll.delete_all()
+dll.display()
